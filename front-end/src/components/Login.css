@@ -1,0 +1,106 @@
+/* Login Container */
+.login-container {
+    max-width: 500px; /* Increased width */
+    margin: 30px auto; /* Adjusted top and bottom margin */
+    padding: 30px; /* Increased padding */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+  
+    /* Animation for fade-in effect */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Slightly above */
+    animation: fadeIn 1s ease-out forwards; /* Fade in and slide down */
+  }
+  
+  /* Title */
+  .login-title {
+    font-size: 28px; /* Bigger title font size */
+    margin-bottom: 20px; /* Adjusted margin */
+    color: #333; /* Dark gray for the title */
+  }
+  
+  /* Form Styling */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased gap between input groups */
+  }
+  
+  /* Input Groups */
+  .input-group {
+    text-align: left;
+  }
+  
+  .input-group label {
+    font-size: 16px; /* Larger font size for labels */
+    color: #555;
+    margin-bottom: 10px; /* Adjusted margin */
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px; /* Larger padding */
+    font-size: 16px; /* Increased font size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: #ff7f50; /* Soft coral focus color */
+  }
+  
+  /* Adjusting icon margin-right */
+  .input-group .icon {
+    margin-right: 15px; /* Increased space between icon and text */
+  }
+  
+  /* Error & Success Messages */
+  .error-message {
+    color: red;
+    font-size: 16px; /* Larger font size */
+  }
+  
+  .success-message {
+    color: green;
+    font-size: 16px; /* Larger font size */
+  }
+  
+  /* Button */
+.login-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ffc107; /* Yellow */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+  }  
+  
+  .login-button:active {
+    transform: translateY(1px); /* Button press effect */
+  }
+  
+  /* Animations */
+  /* Fade-in animation for the container */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px); /* Start slightly above */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End at original position */
+    }
+  }
+  

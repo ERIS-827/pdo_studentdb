@@ -1,0 +1,235 @@
+/* General Layout */
+.app-container {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Light Gray Background */
+  transition: margin-left 0.3s;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;  /* Initially hidden */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: 0.3s ease-in-out;
+  padding-top: 60px;
+  z-index: 1000;
+  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.open {
+  left: 0; /* Show sidebar */
+}
+
+.sidebar a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 15px; /* Adjusted top position */
+  left: 15px; /* Adjusted left position */
+  width: 20px; /* Smaller width */
+  height: 15px; /* Smaller height */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Evenly space the lines */
+  align-items: center;
+  padding: 0;
+}
+
+/* Creating the Hamburger Lines */
+.sidebar-toggle-btn div {
+  width: 100%;
+  height: 2px; /* Smaller line thickness */
+  background-color: white;
+  border-radius: 2px; /* Optional for rounded corners */
+}
+
+/* Button Hover Effect */
+.sidebar-toggle-btn:hover div {
+  background-color: #FFD700; /* Deep Yellow on hover */
+}
+
+/* Optional: Add a hover effect for the button itself */
+.sidebar-toggle-btn:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 0;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.app-container .sidebar.open + .main-content {
+  margin-left: 250px; /* Shift content when sidebar is open */
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #006400; /* Dark Green */
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.gateway-text {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Home Page Styling */
+.home-container {
+  padding: 20px;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.welcome-section h2 {
+  font-size: 2.5rem;
+  color: #006400;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.auth-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.auth-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #FFD700; /* Deep Yellow */
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  background-color: #FFB300;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/* About the School Section */
+.about-school-container {
+  background-color: #ffffff;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.about-school-container h3 {
+  font-size: 2.2rem;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-school-container p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  height: 100vh;            /* Full viewport height */
+}
+
+.profile-content {
+  text-align: center;  /* Center the text inside */
+}

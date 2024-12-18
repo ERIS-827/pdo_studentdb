@@ -1,0 +1,36 @@
+/* Sidebar Toggle Button */
+.sidebar-toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 25px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Evenly space the lines */
+    align-items: center;
+    padding: 0;
+  }
+  
+  /* Creating the Hamburger Lines */
+  .sidebar-toggle-btn div {
+    width: 100%;
+    height: 3px; /* Smaller line thickness */
+    background-color: white;
+    border-radius: 2px; /* Optional for rounded corners */
+  }
+  
+  /* Button Hover Effect */
+  .sidebar-toggle-btn:hover div {
+    background-color: #FFD700; /* Deep Yellow on hover */
+  }
+  
+  /* Optional: Add a hover effect for the button itself */
+  .sidebar-toggle-btn:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
